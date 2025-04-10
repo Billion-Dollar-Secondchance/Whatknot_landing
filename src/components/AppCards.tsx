@@ -9,7 +9,7 @@ const AppCards: React.FC = () => {
       {/* Communication Blueprint Card */}
       <div className="absolute -top-8 -right-8 z-90">
         <Card className="bg-purple-600 rounded-xl w-[180px] h-[180px] text-white shadow-lg opacity-0 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-          <CardContent type="communication" />
+          <CardContent type="mood-drop" />
         </Card>
       </div>
       
