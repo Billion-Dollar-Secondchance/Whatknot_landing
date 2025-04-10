@@ -54,9 +54,15 @@ const WaitlistForm = () => {
     }
   };
 
+  const handleMobileChange = (e) => {
+  const onlyNums = e.target.value.replace(/\D/g, '').slice(0, 10); // remove non-digits, max 10
+  setMobile(onlyNums);
+};
+
   return (
     <div className="w-full max-w-md mx-auto p-6">
       <h2 className="text-2xl font-bold text-center mb-6 text-black">Join the Waitlist!</h2>
+      <br/>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
@@ -65,18 +71,19 @@ const WaitlistForm = () => {
             placeholder="Your Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full px-4 py-3 rounded-full bg-whatknot-purple/20 backdrop-blur-sm text-black placeholder-black/70 border border-black/10 focus:outline-none focus:ring-2 focus:ring-black/30"
+            className="w-full px-4 py-3 rounded-full bg-white/70 backdrop-blur-sm text-black placeholder-black/70 border border-black/10 focus:outline-none focus:ring-2 focus:ring-black/30"
           />
         </div>
 
         <div>
           <input
-            type="tel"
-            placeholder="Your Mobile Number"
-            value={mobile}
-            onChange={(e) => setMobile(e.target.value)}
-            className="w-full px-4 py-3 rounded-full bg-whatknot-purple/20 backdrop-blur-sm text-black placeholder-black/70 border border-black/10 focus:outline-none focus:ring-2 focus:ring-black/30"
-          />
+  type="tel"
+  placeholder="Your Mobile Number"
+  value={mobile}
+  onChange={handleMobileChange}
+  className="w-full px-4 py-3 rounded-full bg-white/70 backdrop-blur-sm text-black placeholder-black/70 border border-black/10 focus:outline-none focus:ring-2 focus:ring-black/30"
+/>
+          
         </div>
 
         <button

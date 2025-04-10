@@ -35,10 +35,19 @@ const Loader = () => {
   return (
     <div 
       className={cn(
-        "fixed inset-0 z-50 flex flex-col items-center justify-center",
-        "bg-gradient-to-br from-gray-950 via-gray-900 to-black",
-        animationStage === 3 && "animate-fadeOut"
-      )}
+    "fixed inset-0 z-50 flex flex-col items-center justify-center",
+    "h-screen w-screen",
+    "bg-gradient-to-br from-black via-gray-500 to-white",
+    animationStage === 3 && "animate-fadeOut"
+  )}
+   style={{
+  background: "linear-gradient(to bottom right, #0f0f0f, #1a1a1a, #000000)"
+  }}
+      // className={cn(
+      //   "fixed inset-0 z-50 flex flex-col items-center justify-center",
+      //   "bg-gradient-to-br from-gray-950 via-gray-900 to-black",
+      //   animationStage === 3 && "animate-fadeOut"
+      // )}
     >
       <div 
         className={cn(
@@ -61,7 +70,7 @@ const Loader = () => {
                   style={{
                     width: '120%',
                     height: '120%',
-                    animation: `ripple 1.5s linear infinite ${i * 0.3}s`
+                    animation: `ripple 1.5s linear infinite ${i * 0.2}s`
                   }}
                 />
               ))}

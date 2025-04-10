@@ -18,16 +18,11 @@ const Index = () => {
       <div className="container mx-auto px-4 py-6">
         <header className="flex justify-between items-center">
           <Logo />
-          <Button
-            variant="outline"
-            className="bg-black text-white border-none hover:bg-black/80"
-            onClick={scrollToWaitlist}
-          >
-            Join Now
-          </Button>
         </header>
 
-        <main className="mt-20 md:mt-32 flex flex-col md:flex-row">
+        {/* <main className="mt-20 md:mt-32 flex flex-col md:flex-row"> */}
+       <main className="mt-5 md:mt-16 flex flex-col md:flex-row md:gap-12 gap-20">
+
           <div className="md:w-1/2 space-y-6 mb-12 md:mb-0">
             <h1 className="text-5xl md:text-6xl font-display font-bold leading-tight">
               Your Relationship's <br/>New Best Friend
@@ -37,7 +32,7 @@ const Index = () => {
               Not a tracker. Not therapy. Just a cozy little app made for the two of you.
             </p>
             
-            <div ref={waitlistRef} className="p-6 bg-black/10 backdrop-blur-sm rounded-3xl max-w-md">
+            <div ref={waitlistRef} className="p-6 bg-black/10 backdrop-blur-sm rounded-3xl max-w-md" style={{marginTop:40}} >
               <WaitlistForm />
             </div>
           </div>
